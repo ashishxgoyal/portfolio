@@ -1,0 +1,638 @@
+/* Import a Batman-inspired font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+/* Add this media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  /* Reset padding for navigation */
+  nav {
+    padding: 20px;
+  }
+
+  /* Center-align navigation links */
+  nav ul {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    padding: 10px 0;
+  }
+
+  /* Center-align the content section */
+  .content {
+    text-align: center;
+    left: 0;
+    right: 0;
+  }
+
+  .content .title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+/* Example for responsive font size */
+.content h1 {
+  font-size: 4rem; /* Adjust as needed */
+  line-height: 1.2;
+}
+
+
+  .content p {
+    width: 80%;
+    margin: 15px auto 30px;
+  }
+
+  /* Increase spacing for QR codes */
+  .qr-codes-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .qr-code {
+    margin-bottom: 20px;
+  }
+
+  .qr-code img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anton", sans-serif; /* Use "Anton" font for headings */
+}
+
+/* Remove underlines from links */
+a {
+  text-decoration: none;
+}
+
+/* Create a Batman-themed hero section */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style the navigation bar with Batman colors */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+  background-color: #000000; /* Batman black */
+  color: #fff; /* White text */
+}
+
+/* Style navigation links */
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  color: #f6f4ed; /* Batman yellow */
+  position: relative;
+  padding: 5px 0;
+}
+
+nav ul li a:hover {
+  color: #800000; /* Lighter yellow on hover */
+}
+
+/* Add a Batman-themed underline on hover */
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #800000; /* Batman yellow */
+  transition: 0.3s;
+  bottom: 0;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+/* Style buttons with Batman colors */
+.btn {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background-size: 152% 100%;
+  background: #000000 url('2.jpg') center/cover no-repeat; /* Batman yellow background with image */
+  border: 2px solid #800000; /* Batman yellow border */
+}
+
+
+
+.btn:hover {
+  background: transparent;
+  border-color: #800000; /* Batman yellow */
+  color: #800000; /* Batman yellow */
+}
+
+/* Update content section with Batman-themed colors */
+.content {
+  position: absolute;
+  top: 35%;
+  left: 8%;
+}
+
+.content .title {
+  color: #800000; /* Batman yellow */
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 10px; /* Adjusted margin-bottom */
+  margin-top: -10px; /* Adjusted margin-top */
+
+  background: linear-gradient(
+    120deg,
+    #ffffff 20.69%, /* Dark gray */
+    #fefefe 50.19%, /* Black */
+    #ffffff 79.69% /* Batman yellow */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.content h1 {
+  color: #ffffff; /* White text */
+  font-size: 75px;
+  font-weight: 900;
+  line-height: 90px;
+  text-transform: inherit;
+  width: 70%;
+  display: inline-block; /* Set to inline-block to make it appear on the same line */
+}
+
+.content h1 span {
+  color: #f6bd0b; /* Batman yellow */
+}
+
+
+.content p {
+  width: 55%;
+  color: transparent; /* Make text transparent initially */
+  margin-top: 25px;
+  margin-bottom: 30px;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+
+  /* Animation settings */
+  animation: typing 2s steps(30, end) forwards; /* Use "steps" to simulate dropping effect */
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* Start with no width, making text invisible */
+  }
+  to {
+    color: #e6e4e1; /* Batman yellow */
+    width: 100%; /* Gradually increase width to reveal text */
+  }
+}
+ /* Adjust spacing for project cards */
+/* CSS */
+
+/* Set background color of section */
+#projects {
+  background-color: #000000; /* Black background */
+}
+
+/* Set background color of cards */
+.project {
+  background-color: rgb(43, 39, 39); /* Blue background */
+  color: white; /* White text color for better visibility */
+  padding: 15px; /* Adjusted padding */
+  margin: 15px 10px; /* Adjusted margin */
+  width: calc(20% - 20px); /* Adjust width to fit 5 cards horizontally */
+  border: 1px solid #800000; /* Add a 1px gray border around each project */
+  padding: 20px; /* Increase padding for spacing */
+  text-align: center; /* Center the content horizontally */
+  box-sizing: border-box; /* Include border in width calculation */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+/* Change background color on hover */
+.project:hover {
+  background: linear-gradient(to top, #044b74 50%, rgb(43, 39, 39) 50%); /* Gradient for smooth transition */
+  background-size: 100% 200%; /* Ensure full coverage */
+  background-position: 0 100%; /* Start from the bottom */
+  transition: background-position 0.5s ease; /* Smooth transition for background position */
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-image {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain the aspect ratio of the image */
+  border-radius: 50%; /* Make image circular */
+  border: 5px solid #800000; /* Add a 2px blue border around the image */
+}
+
+.project-details {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.project-title {
+  text-align: center;
+  c
+}
+.project-button {
+  display: inline-block;
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  line-height: 50px; /* Center text vertically */
+  border-radius: 50%; /* Make the button round */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  text-align: center; /* Center text horizontally */
+  text-decoration: none; /* Remove default link underline */
+  background-image: url('arr.png'); /* Add image */
+  background-size: contain; /* Ensure image fits inside the button */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+
+
+
+
+
+/* Style for the "About Me" section */
+#about .about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+
+#about .about-image {
+  flex: 1;
+  padding-right: 10px; /* Adjust the spacing between image and text */
+}
+
+#about .about-image .profile-image {
+  max-width: 1500px;
+  max-height: 400px; /* Manage the height of the image */
+  display: block; /* Ensure image behaves as a block element */
+  margin: 100 auto; /* Center the image horizontally */
+  margin-top: 20px; /* Add top margin */
+  border: 10px solid #800000; /* Add border with color #800000 */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  background-color: #000;
+}
+
+#about .about-text {
+  flex: 2;
+  padding-left: 20px; /* Adjust the spacing between text and image */
+}
+
+#about .about-text .about-heading {
+  text-align: center; /* Center the heading */
+  color: #800000;
+  font-size: 40px;
+  position: relative; /* Set position to relative */
+  margin-right: 50%;
+}
+
+#about .about-text .about-heading::after {
+  content: ""; /* Add content */
+  position: absolute; /* Set position to absolute */
+  width: 100%;
+  height: 4px; /* Set the height of the underline */
+  background-color: #800000; /* Set the color of the underline */
+  bottom: 0; /* Position the underline at the bottom */
+  left: 0; /* Align the underline with the text */
+  transform-origin: bottom center; /* Set the transform origin */
+  transform: scaleX(0); /* Initially scale the underline to 0 */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+#about .about-text .about-heading:hover::after {
+  transform: scaleX(1); /* Scale the underline to full width on hover */
+}
+
+
+#about .about-text .about-paragraph {
+  text-align: justify; /* Justify the text */
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 2px;
+}
+
+
+@media (max-width: 768px) {
+  #about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .about-image,
+  #about .about-text {
+    flex: auto;
+    padding: 0;
+  }
+
+  #about .about-text {
+    margin-top: 20px; /* Add some spacing between image and text on smaller screens */
+  }
+}
+
+
+.resume-button {
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background-size: 152% 100%;
+  background: #000000 url('2.jpg') center/cover no-repeat; /* Batman yellow background with image */
+  border: 2px solid #800000; /* Batman yellow border */
+  margin-top: 20px;
+margin-bottom: 15px;
+}
+
+
+
+.resume-button:hover {
+  background-color: #000000;
+  border-color: #800000; /* Batman yellow */
+  color: #800000; /* Batman yellow */
+}
+
+
+/* Style for the "Skills" section */
+.services {
+  color: #fff;
+  background: #111;
+}
+.title {
+  text-align: center; /* Center the title */
+  color: #d12424; /* Set the text color */
+  margin: 20px 20px 20px 20px; /* Add margin from top, right, bottom, and left */
+  font-size: 30px; /* Set the font size */
+  text-decoration: underline; /* Underline the text */
+  text-decoration-color: white; /* Set the underline color */
+  text-decoration-thickness: 4px; /* Set the thickness of the underline */
+  font-weight: bold; /* Make the text bold */
+}
+
+
+.services .serv-content {
+  display: flex; /* Use flexbox for horizontal alignment */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+
+.services .serv-content .card {
+  width: calc(33% - 220px); /* Adjust the width of each card */
+  background: #222;
+  text-align: center;
+  border-radius: 10px;
+  padding: 60px 35px; /* Increase the height of each card */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 80px; /* Add margin between cards */
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+.services .serv-content .card:hover {
+  background: #800000;
+}
+
+.services .serv-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+.services .serv-content .card i {
+  font-size: 50px;
+  color: #888e8d;
+  background: linear-gradient(135deg, #041d3d, #fff, crimson);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i {
+  color: #fff;
+}
+
+.services .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+
+
+#certifications {
+  text-align: center;
+  color: #c13434;
+  padding: 50px 0;
+}
+
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.certificate-card {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #000000;
+  transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.certificate-card h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  text-decoration: underline; /* Underline the text */
+  text-decoration-color: rgb(205, 29, 29); /* Set the underline color */
+}
+
+.certificate-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+/* New CSS for hover effect */
+.certificate-card:hover {
+  background-image: linear-gradient(to top, #042858, #000); /* Change to desired hover color with gradient */
+}
+
+
+
+   
+
+
+
+  
+
+
+/* Add custom styles as needed */
+
+
+
+.contact-container {
+  display: flex;
+}
+
+.contact-info {
+  flex: 30%;
+  background-color: rgb(96, 12, 26);
+
+  text-align: center;
+}
+
+.contact-info .profile img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+}
+
+.contact-info .profile h3 {
+  margin: 10px 0;
+  color: #fffefe;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.contact-info .profile p {
+  margin: 5px 0;
+  color: #fffdfd;
+}
+
+.contact-form {
+  flex: 70%;
+  padding: 20px;
+  background-color: #f6f6f6;
+  color: #2f2b2b;
+}
+
+.contact-form h2 {
+  margin-top: 0;
+  text-align: center;
+  
+}
+
+.contact-details {
+  margin-bottom: 20px;
+
+}
+
+.contact-details p {
+  margin: 5px 0;
+  color: #292626;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  background-color: #2a2626;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #dd0937;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Set height to maintain square shape */
+  border-radius: 10%; /* Adjust the border-radius to make it more rounded */
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* Increase the size on hover */
+}
+
+
+
+.contact-form .contact-icon {
+  width: 30px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+}
+
+
+
+
+
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
